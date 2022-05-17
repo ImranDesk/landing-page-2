@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+  color: white;
+}
+body {
+  min-height: 100%;
+  width: 100%;
+}
+.container {
+  width: 100%;
+  max-width: 100rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  margin: 0 auto;
+  @media (max-width: 1024px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-size: 2.25rem;
+  color: #313131;
+}
+
+// section {
+//   color: #313131;
+// }
+.button {
+  display: inline-block;
+  background-color: #ff9fdb;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  font-size: large;
+  //   background: none;
+}
+img {
+  max-width: 100%;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  //   background-color: #12002f;
+
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 2rem;
+      span {
+        font-weight: 600;
+      }
+    }
+    nav {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(4, auto);
+      a {
+        font-size: 1.25rem;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+main {
+  .banner {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../images/header.jpg");
+    background-position: top right;
+    background-size: cover;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      background-color: #12002f;
+      opacity: 0.8;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      h1 {
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+        span {
+          color: #ff9fdb;
+        }
+      }
+      h3 {
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+        font-weight: 400;
+      }
+    }
+  }
+  .services {
+    background-color: #eee;
+    .container {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+
+      .services-grd {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        .service {
+          border-radius: 1rem;
+          overflow: hidden;
+          background-color: white;
+          box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+          .img-box {
+            display: block;
+            width: 100%;
+            border-bottom: 5px solid #ff9fdb;
+            .img {
+              display: block;
+              width: 100%;
+              height: 8rem;
+              object-fit: cover;
+            }
+          }
+          .content {
+            padding: 1rem;
+            h3,
+            p {
+              color: #313131;
+            }
+          }
+        }
+      }
+    }
+  }
+  .projects {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    .projects-grid {
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      .project {
+        border-radius: 1rem;
+        overflow: hidden;
+        background-image: url("../images/project-img.jpg");
+        .content {
+          opacity: 0;
+          padding: 1rem;
+          background-color: rgba(64, 39, 68, 0.8);
+          h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+          }
+          p {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+          }
+        }
+        &:hover {
+          .content {
+            opacity: 1;
+            transition: 0.4s;
+          }
+        }
+      }
+    }
+    .center {
+      text-align: center;
+    }
+  }
+  .contact {
+    background-color: #9b75d7;
+    .container {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      h2 {
+        color: white;
+      }
+      form {
+        max-width: 42.5rem;
+        display: block;
+        margin: 0 auto;
+        .form-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+          margin-bottom: 16px;
+          .form-area {
+            grid-column: span 2;
+          }
+          .form-element,
+          .form-area {
+            display: block;
+            width: 100%;
+            font-size: 20px;
+            appearance: none;
+            border: none;
+            outline: none;
+            background: none;
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            color: #313131;
+            &::placeholder {
+              color: #888;
+            }
+          }
+        }
+        .right-align {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
