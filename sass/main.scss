@@ -4,8 +4,7 @@
   box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
   color: white;
-  transition: all .4s ease;
-
+  transition: all .4s ;
 }
 body {
   min-height: 100%;
@@ -27,7 +26,7 @@ body {
   }
 }
 
-.burger{
+.burger {
   display: block;
   width: 2.1875rem;
   cursor: pointer;
@@ -35,17 +34,74 @@ body {
   background: none;
   outline: none;
   border: none;
-
+  position: relative;
 }
-.bar, .burger::after, .burger::before{
-  content: '';
+.burger .bar,
+.burger::after,
+.burger::before {
+  content: "";
   display: block;
   width: 100%;
-  height: .3125rem;
+  height: 0.3125rem;
   background-color: white;
-  margin: .375rem 0;
+  margin: 0.375rem 0;
+  transition: all 0.4s;
 }
 
+.is-active::before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+.is-active::after {
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 98;
+  background-color: #4D089A;
+  padding-top: 7.5rem;
+  left: 100%; //hiding
+  transition: all 0.4s ease;
+
+  a {
+    display: block;
+    width: 100%;
+    max-width: 12.5rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    background-color: #FF6337;
+    text-decoration: none;
+    color: white;
+    transition: all .2s ;
+    &:hover {
+      background-color: #ff7b56;
+    }
+  }
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+@media (min-width: 767px) {
+  .mobile-nav {
+    display: none;
+  }
+  .burger {
+    display: none;
+  }
+}
 
 section h2 {
   text-align: center;
@@ -55,12 +111,9 @@ section h2 {
   color: #313131;
 }
 
-// section {
-//   color: #313131;
-// }
 .button {
   display: inline-block;
-  background-color: #ff9fdb;
+  background-color: #FF6337;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -71,7 +124,12 @@ section h2 {
   appearance: none;
   cursor: pointer;
   font-size: large;
-  //   background: none;
+  transition: all .2s ;
+
+  &:hover{
+    background-color: #ff7b56;
+  }
+
   @media (max-width: 767px) {
     font-size: 1.125rem;
   }
@@ -80,13 +138,14 @@ img {
   max-width: 100%;
 }
 header {
+ 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 99;
-  //   background-color: #12002f;
   .menu-flex {
+  
     a {
       margin-left: 1rem;
     }
@@ -109,7 +168,7 @@ header {
     }
     nav {
       display: grid;
-      gap: 1rem;
+      // gap: 1rem;
       grid-template-columns: repeat(4, auto);
       a {
         font-size: 1.25rem;
@@ -119,11 +178,10 @@ header {
         display: none;
       }
     }
-
   }
-  &.is-scrolling{
-    background-color: #12002f;
-    .container{
+  &.is-scrolling {
+    background-color: #4D089A;
+    .container {
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
@@ -148,7 +206,7 @@ main {
       left: 0;
       right: 0;
       z-index: 0;
-      background-color: #12002f;
+      background-color: #4D089A;
       opacity: 0.8;
     }
     .container {
@@ -158,7 +216,7 @@ main {
         font-size: 4.5rem;
         margin-bottom: 2rem;
         span {
-          color: #ff9fdb;
+          color: #FF6337;
         }
         @media (max-width: 767px) {
           font-size: 2rem;
@@ -198,7 +256,7 @@ main {
           .img-box {
             display: block;
             width: 100%;
-            border-bottom: 5px solid #ff9fdb;
+            border-bottom: 5px solid #FF6337;
             .img {
               display: block;
               width: 100%;
@@ -238,7 +296,7 @@ main {
         .content {
           opacity: 0;
           padding: 1rem;
-          background-color: rgba(64, 39, 68, 0.8);
+          background-color:#420488c4;
           h3 {
             font-size: 2rem;
             margin-bottom: 1rem;
@@ -261,7 +319,8 @@ main {
     }
   }
   .contact {
-    background-color: #9b75d7;
+    background-color: #4D089A;
+
     .container {
       padding-top: 4rem;
       padding-bottom: 4rem;
@@ -278,14 +337,15 @@ main {
           gap: 1rem;
           margin-bottom: 16px;
           @media (max-width: 767px) {
-            grid-template-columns:repeat(1,1fr);
+            grid-template-columns: repeat(1, 1fr);
             clear: both;
             display: inline;
-            input,textarea {
-              margin-bottom: .6rem;
+            input,
+            textarea {
+              margin-bottom: 0.6rem;
             }
-          } 
-         
+          }
+
           .form-area {
             grid-column: span 2;
           }
