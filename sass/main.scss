@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
   color: white;
-  transition: all .4s ;
+  transition: all 0.4s;
 }
 body {
   min-height: 100%;
@@ -67,7 +67,7 @@ body {
   width: 100%;
   min-height: 100vh;
   z-index: 98;
-  background-color: #4D089A;
+  background-color: #4d089a;
   padding-top: 7.5rem;
   left: 100%; //hiding
   transition: all 0.4s ease;
@@ -80,10 +80,10 @@ body {
     margin-bottom: 1rem;
     text-align: center;
     padding: 0.75rem 1rem;
-    background-color: #FF6337;
+    background-color: #ff6337;
     text-decoration: none;
     color: white;
-    transition: all .2s ;
+    transition: all 0.2s;
     &:hover {
       background-color: #ff7b56;
     }
@@ -113,7 +113,7 @@ section h2 {
 
 .button {
   display: inline-block;
-  background-color: #FF6337;
+  background-color: #ff6337;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -124,9 +124,9 @@ section h2 {
   appearance: none;
   cursor: pointer;
   font-size: large;
-  transition: all .2s ;
+  transition: all 0.2s;
 
-  &:hover{
+  &:hover {
     background-color: #ff7b56;
   }
 
@@ -138,14 +138,12 @@ img {
   max-width: 100%;
 }
 header {
- 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 99;
   .menu-flex {
-  
     a {
       margin-left: 1rem;
     }
@@ -162,6 +160,7 @@ header {
       text-transform: uppercase;
       font-weight: 900;
       font-size: 2rem;
+      color: #ff6337;
       span {
         font-weight: 600;
       }
@@ -180,7 +179,7 @@ header {
     }
   }
   &.is-scrolling {
-    background-color: #4D089A;
+    background-color: #4d089a;
     .container {
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -206,7 +205,7 @@ main {
       left: 0;
       right: 0;
       z-index: 0;
-      background-color: #4D089A;
+      background-color: #4d089a;
       opacity: 0.8;
     }
     .container {
@@ -216,7 +215,7 @@ main {
         font-size: 4.5rem;
         margin-bottom: 2rem;
         span {
-          color: #FF6337;
+          color: #ff6337;
         }
         @media (max-width: 767px) {
           font-size: 2rem;
@@ -256,7 +255,7 @@ main {
           .img-box {
             display: block;
             width: 100%;
-            border-bottom: 5px solid #FF6337;
+            border-bottom: 5px solid #ff6337;
             .img {
               display: block;
               width: 100%;
@@ -296,7 +295,7 @@ main {
         .content {
           opacity: 0;
           padding: 1rem;
-          background-color:#420488c4;
+          background-color: #420488c4;
           h3 {
             font-size: 2rem;
             margin-bottom: 1rem;
@@ -319,7 +318,7 @@ main {
     }
   }
   .contact {
-    background-color: #4D089A;
+    background-color: #4d089a;
 
     .container {
       padding-top: 4rem;

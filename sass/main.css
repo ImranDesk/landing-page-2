@@ -5,8 +5,8 @@
           box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
   color: white;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 body {
@@ -84,7 +84,7 @@ body {
   width: 100%;
   min-height: 100vh;
   z-index: 98;
-  background-color: #4D089A;
+  background-color: #4d089a;
   padding-top: 7.5rem;
   left: 100%;
   -webkit-transition: all 0.4s ease;
@@ -99,11 +99,11 @@ body {
   margin-bottom: 1rem;
   text-align: center;
   padding: 0.75rem 1rem;
-  background-color: #FF6337;
+  background-color: #ff6337;
   text-decoration: none;
   color: white;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .mobile-nav a:hover {
@@ -133,7 +133,7 @@ section h2 {
 
 .button {
   display: inline-block;
-  background-color: #FF6337;
+  background-color: #ff6337;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -146,8 +146,8 @@ section h2 {
           appearance: none;
   cursor: pointer;
   font-size: large;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .button:hover {
@@ -194,6 +194,7 @@ header .container h2 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 2rem;
+  color: #ff6337;
 }
 
 header .container h2 span {
@@ -219,7 +220,7 @@ header .container nav a {
 }
 
 header.is-scrolling {
-  background-color: #4D089A;
+  background-color: #4d089a;
 }
 
 header.is-scrolling .container {
@@ -250,7 +251,7 @@ main .banner::after {
   left: 0;
   right: 0;
   z-index: 0;
-  background-color: #4D089A;
+  background-color: #4d089a;
   opacity: 0.8;
 }
 
@@ -265,7 +266,7 @@ main .banner .container h1 {
 }
 
 main .banner .container h1 span {
-  color: #FF6337;
+  color: #ff6337;
 }
 
 @media (max-width: 767px) {
@@ -328,7 +329,7 @@ main .services .container .services-grd .service {
 main .services .container .services-grd .service .img-box {
   display: block;
   width: 100%;
-  border-bottom: 5px solid #FF6337;
+  border-bottom: 5px solid #ff6337;
 }
 
 main .services .container .services-grd .service .img-box .img {
@@ -409,7 +410,7 @@ main .projects .center {
 }
 
 main .contact {
-  background-color: #4D089A;
+  background-color: #4d089a;
 }
 
 main .contact .container {
