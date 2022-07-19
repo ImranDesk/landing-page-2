@@ -6,6 +6,9 @@
   color: white;
   transition: all 0.4s;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   min-height: 100%;
   width: 100%;

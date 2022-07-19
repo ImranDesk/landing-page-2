@@ -1,12 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
   color: white;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,14 +23,12 @@ body {
   padding-right: 8rem;
   margin: 0 auto;
 }
-
 @media (max-width: 1024px) {
   .container {
     padding-left: 4rem;
     padding-right: 4rem;
   }
 }
-
 @media (max-width: 767px) {
   .container {
     padding-left: 2rem;
@@ -58,18 +58,15 @@ body {
   height: 0.3125rem;
   background-color: white;
   margin: 0.375rem 0;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
 .is-active::before {
-  -webkit-transform: rotate(-45deg) translate(-8px, 6px);
-          transform: rotate(-45deg) translate(-8px, 6px);
+  transform: rotate(-45deg) translate(-8px, 6px);
 }
 
 .is-active::after {
-  -webkit-transform: rotate(45deg) translate(-9px, -8px);
-          transform: rotate(45deg) translate(-9px, -8px);
+  transform: rotate(45deg) translate(-9px, -8px);
 }
 
 .is-active .bar {
@@ -87,10 +84,8 @@ body {
   background-color: #4d089a;
   padding-top: 7.5rem;
   left: 100%;
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-
 .mobile-nav a {
   display: block;
   margin: 0 auto;
@@ -99,10 +94,8 @@ body {
   padding: 0.75rem 1rem;
   text-decoration: underline;
   font-size: x-large;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-
 .mobile-nav a:hover {
   color: #ff7b56;
 }
@@ -119,7 +112,6 @@ body {
     display: none;
   }
 }
-
 section h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -143,14 +135,11 @@ section h2 {
           appearance: none;
   cursor: pointer;
   font-size: large;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-
 .button:hover {
   background-color: #ff7b56;
 }
-
 @media (max-width: 767px) {
   .button {
     font-size: 1.125rem;
@@ -168,58 +157,41 @@ header {
   width: 100%;
   z-index: 99;
 }
-
 header .menu-flex a {
   margin-left: 1rem;
 }
-
 header .container {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 header .container h2 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 2rem;
   color: #ff6337;
 }
-
 header .container h2 span {
   font-weight: 600;
 }
-
 header .container nav {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[4];
-      grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, auto);
 }
-
 header .container nav a {
   font-size: 1.25rem;
   text-decoration: none;
 }
-
 @media (max-width: 767px) {
   header .container nav {
     display: none;
   }
 }
-
 header.is-scrolling {
   background-color: #4d089a;
 }
-
 header.is-scrolling .container {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -227,18 +199,13 @@ header.is-scrolling .container {
 
 main .banner {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-image: url("../images/header.jpg");
   background-position: top right;
   background-size: cover;
   position: relative;
 }
-
 main .banner::after {
   content: "";
   display: block;
@@ -251,84 +218,65 @@ main .banner::after {
   background-color: #4d089a;
   opacity: 0.8;
 }
-
 main .banner .container {
   position: relative;
   z-index: 1;
 }
-
 main .banner .container h1 {
   font-size: 4.5rem;
   margin-bottom: 2rem;
 }
-
 main .banner .container h1 span {
   color: #ff6337;
 }
-
 @media (max-width: 767px) {
   main .banner .container h1 {
     font-size: 2rem;
   }
 }
-
 main .banner .container h3 {
   font-size: 2.25rem;
   margin-bottom: 2rem;
   font-weight: 400;
 }
-
 @media (max-width: 767px) {
   main .banner .container h3 {
     font-size: 1.25rem;
   }
 }
-
 main .services {
   background-color: #eee;
 }
-
 main .services .container {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-
 main .services .container .services-grd {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
-
 @media (max-width: 1024px) {
   main .services .container .services-grd {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 767px) {
   main .services .container .services-grd {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-
 main .services .container .services-grd .service {
   border-radius: 1rem;
   overflow: hidden;
   background-color: white;
-  -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
 }
-
 main .services .container .services-grd .service .img-box {
   display: block;
   width: 100%;
   border-bottom: 5px solid #ff6337;
 }
-
 main .services .container .services-grd .service .img-box .img {
   display: block;
   width: 100%;
@@ -336,121 +284,93 @@ main .services .container .services-grd .service .img-box .img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 main .services .container .services-grd .service .content {
   padding: 1rem;
 }
-
 main .services .container .services-grd .service .content h3,
 main .services .container .services-grd .service .content p {
   color: #313131;
 }
-
 main .projects {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-
 main .projects .projects-grid {
   margin-bottom: 2rem;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-
 @media (max-width: 768px) {
   main .projects .projects-grid {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 767px) {
   main .projects .projects-grid {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-
 main .projects .projects-grid .project {
   border-radius: 1rem;
   overflow: hidden;
   background-image: url("../images/project-img.jpg");
 }
-
 main .projects .projects-grid .project .content {
   opacity: 0;
   padding: 1rem;
-  background-color: #420488c4;
+  background-color: rgba(66, 4, 136, 0.768627451);
 }
-
 main .projects .projects-grid .project .content h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 main .projects .projects-grid .project .content p {
   font-size: 1.125rem;
   margin-bottom: 1rem;
 }
-
 main .projects .projects-grid .project:hover .content {
   opacity: 1;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 main .projects .center {
   text-align: center;
 }
-
 main .contact {
   background-color: #4d089a;
 }
-
 main .contact .container {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-
 main .contact .container h2 {
   color: white;
 }
-
 main .contact .container form {
   max-width: 42.5rem;
   display: block;
   margin: 0 auto;
 }
-
 main .contact .container form .form-grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 16px;
 }
-
 @media (max-width: 767px) {
   main .contact .container form .form-grid {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     clear: both;
     display: inline;
   }
   main .contact .container form .form-grid input,
-  main .contact .container form .form-grid textarea {
+main .contact .container form .form-grid textarea {
     margin-bottom: 0.6rem;
   }
 }
-
 main .contact .container form .form-grid .form-area {
   grid-column: span 2;
 }
-
 main .contact .container form .form-grid .form-element,
 main .contact .container form .form-grid .form-area {
   display: block;
@@ -467,27 +387,16 @@ main .contact .container form .form-grid .form-area {
   padding: 1rem;
   color: #313131;
 }
-
-main .contact .container form .form-grid .form-element::-webkit-input-placeholder,
-main .contact .container form .form-grid .form-area::-webkit-input-placeholder {
+main .contact .container form .form-grid .form-element::-moz-placeholder, main .contact .container form .form-grid .form-area::-moz-placeholder {
   color: #888;
 }
-
-main .contact .container form .form-grid .form-element:-ms-input-placeholder,
-main .contact .container form .form-grid .form-area:-ms-input-placeholder {
+main .contact .container form .form-grid .form-element:-ms-input-placeholder, main .contact .container form .form-grid .form-area:-ms-input-placeholder {
   color: #888;
 }
-
-main .contact .container form .form-grid .form-element::-ms-input-placeholder,
-main .contact .container form .form-grid .form-area::-ms-input-placeholder {
-  color: #888;
-}
-
 main .contact .container form .form-grid .form-element::placeholder,
 main .contact .container form .form-grid .form-area::placeholder {
   color: #888;
 }
-
 main .contact .container form .right-align {
   text-align: right;
 }
@@ -496,5 +405,4 @@ main .contact .container form .right-align {
   .hide-mob {
     display: none;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
